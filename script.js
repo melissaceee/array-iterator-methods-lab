@@ -211,13 +211,97 @@ console.log('Exercise 5 Correct Result: ',
 )
 
 
+const devs = [
+    { name: 'Alex', year: 1988 },
+    { name: 'Dani', year: 1986 },
+    { name: 'Matt', year: 1970 },
+    { name: 'Wes', year: 2015 }
+  ];
+  
+//  EXERCISE 6: ARRAY.PROTOTYPE.SOME()
+// Array.prototype.some()
+
+// 6. Determine if there is at least one person in the devs array who is 18 years old or older.
+
+// - You have an array of people with their respective ages.
+// - Use the Array.prototype.some() method to check if any person in the array is 18 years old or older.
+// - Store the result (true or false) in the variable 'isAdultPresent'. 
+
+let isAdultPresent = null
+const currentYear = 2024;
+
+// Enter your solution code here:
+isAdultPresent= devs.some(dev=> (currentYear-dev.year) >=18)
 
 
+// Check your return value:
+console.log('Exercise 6 My Result: ', isAdultPresent)
+console.log('Exercise 6 Correct Result: ', true)
 
 
+// Exercise 7: Array.prototype.every()
+// Array.prototype.every()
+
+// 7. Use Array.prototype.every() to determine if every person in the devs array is 19 years old or older.
+
+// - You have an array of individuals, each with their year of birth represented by the 'year' property.
+// - Use the Array.prototype.every() method to verify if every individual in the array is at least 19 years old.
+// - Store the result (true or false) in the variable 'isEveryone19OrOlder'.
+
+let isEveryone19OrOlder = null
+const currentYear =2024
+// Enter your solution code here:
+
+isEveryone19OrOlder= devs.every(dev=> (currentYear-dev.year) >=19)
+
+// Check your return value:
+console.log('Exercise 7 My Result: ', isEveryone19OrOlder)
+console.log('Exercise 7 Correct Result: ', false)
 
 
+const comments = [
+    { text: 'Love this!', id: 523423 },
+    { text: 'Super good', id: 823423 },
+    { text: 'You are the best', id: 2039842 },
+    { text: 'Ramen is my fav food ever', id: 123523 },
+    { text: 'Nice Nice Nice!', id: 542328 }
+  ];
+  
+//   Exercise 8: Array.prototype.find()
+// Array.prototype.find()
 
+// 8. Use Array.prototype.find() to identify and retrieve the comment object with a specific ID 823423 from an array of comment objects.
+
+// - Assign the found comment object to the variable 'commentById'.
+
+
+let commentById = {}
+
+// Enter your solution code here:
+
+commentById = comments.find(comment=>comment.id === 823423)
+
+// Check your return value:
+console.log('Exercise 8 My Result: ', commentById)
+console.log('Exercise 8 Correct Result: ', { text: 'Super good', id: 823423 })
+
+
+// Exercise 9: Array.prototype.findIndex()
+// Array.prototype.findIndex()
+
+// 9. Determine the index of the comment that has a specific ID 123523 in an array of comment objects.
+
+// - Store the index in the variable 'idx'.
+
+let idx = null
+
+// Enter your solution code here:
+
+idx=comments.findIndex(comments=>comment.id === 123523)
+
+// Check your return value:
+console.log('Exercise 9 My Result: ', idx)
+console.log('Exercise 9 Correct Result: ', 3)
 
 
 
@@ -231,19 +315,6 @@ console.log('Exercise 5 Correct Result: ',
   ];
   
 
-  const devs = [
-    { name: 'Alex', year: 1988 },
-    { name: 'Dani', year: 1986 },
-    { name: 'Matt', year: 1970 },
-    { name: 'Wes', year: 2015 }
-  ];
-  
 
-  const comments = [
-    { text: 'Love this!', id: 523423 },
-    { text: 'Super good', id: 823423 },
-    { text: 'You are the best', id: 2039842 },
-    { text: 'Ramen is my fav food ever', id: 123523 },
-    { text: 'Nice Nice Nice!', id: 542328 }
-  ];
+
   
