@@ -109,7 +109,27 @@ console.log('Exercise 3 Correct Result: ',
         { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 }
     ]
 )
+// EXERCISE 4: ARRAY.PROTOTYPE.FIND()
+// Array.prototype.find()
 
+
+
+// 4. Use Array.prototype.find() to identify the inventor with the first name 'Ada' from an array of inventor objects
+
+// - You have an array of objects, each representing an inventor with various properties including their first name.
+// -  Utilize the Array.prototype.find() method to locate the object for the inventor named 'Ada'.
+// -  Assign the found inventor object to the variable 'inventorNamedAda'
+
+let inventorNamedAda = {}
+
+// Enter you solution code here:
+
+inventorNamedAda = inventor.find(inventor=>inventor.first ==='Ada')
+
+// Check your return value:
+console.log('Exercise 4 My Result: ', inventorNamedAda)
+console.log('Exercise 4 Correct Result: ', { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 })
+// inventor is not defined error message but inventor is defined... come back to this one
 
 const people = [
     'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry',
@@ -124,6 +144,86 @@ const people = [
     'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony',
     'Blake, William'
   ];
+
+//   Exercise 5: Array.prototype.map()
+// Array.prototype.map()
+
+// 5. Use the Array.prototype.map() method to reformat each name in the 'people' array. 
+// The goal is to convert names from "Last, First" format to "First Last" format.
+
+// Hint: Use the String.prototype.split method to separate the first and last names. You can split the string using ', ' as the separator.
+// After splitting the names, rearrange them to the "First Last" format.
+
+let firstLast = []
+
+// Enter your solution code here:
+
+firstLast=people.map(person=>{
+    let [last,first] = person.split(',');
+    return `${first}, ${last}`
+})
+
+// Check your return value:
+console.log('Exercise 5 My Result: ', firstLast)
+console.log('Exercise 5 Correct Result: ',
+    [
+        'Carl Becker',
+        'Samuel Beckett',
+        'Mick Beddoes',
+        'Henry Beecher',
+        'Ludwig Beethoven',
+        'Menachem Begin',
+        'Hilaire Belloc',
+        'Saul Bellow',
+        'Robert Benchley',
+        'Peter Benenson',
+        'David Ben-Gurion',
+        'Walter Benjamin',
+        'Tony Benn',
+        'Chester Bennington',
+        'Leana Benson',
+        'Silas Bent',
+        'Lloyd Bentsen',
+        'Ric Berger',
+        'Ingmar Bergman',
+        'Luciano Berio',
+        'Milton Berle',
+        'Irving Berlin',
+        'Eric Berne',
+        'Sandra Bernhard',
+        'Yogi Berra',
+        'Halle Berry',
+        'Wendell Berry',
+        'Erin Bethea',
+        'Aneurin Bevan',
+        'Ken Bevel',
+        'Joseph Biden',
+        'Ambrose Bierce',
+        'Steve Biko',
+        'Josh Billings',
+        'Frank Biondo',
+        'Augustine Birrell',
+        'Elk Black',
+        'Robert Blair',
+        'Tony Blair',
+        'William Blake'
+    ]
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   const travelMethods = [
     'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
